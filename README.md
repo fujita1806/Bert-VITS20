@@ -28,28 +28,43 @@ VITS2 Backbone with bert
 
 
 # 2.安装需要的依赖
-+ %cd /content/Bert-VITS2/
-+ !pip install -r requirements.txt
+```
+ %cd /content/Bert-VITS2/
+!pip install -r requirements.txt
+```
 # 3.下载必要的模型到对应目录
-+ hugging face不提供直链下载，使用二次分发下载模型`
-+ !wget -P bert/chinese-roberta-wwm-ext-large/ https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/flax_model.msgpack
-+ !wget -P bert/chinese-roberta-wwm-ext-large/ https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/pytorch_model.bin
-+ !wget -P bert/chinese-roberta-wwm-ext-large/ https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/tf_model.h5
+hugging face不提供直链下载，使用二次分发下载模型
+```
+!wget -P bert/chinese-roberta-wwm-ext-large/ https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/flax_model.msgpack
+!wget -P bert/chinese-roberta-wwm-ext-large/ https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/pytorch_model.bin
+!wget -P bert/chinese-roberta-wwm-ext-large/ https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/tf_model.h5
+```
 # 4.下载底模到对应文件夹
-+ !wget -P logs/{datasetname}/ https://huggingface.co/Erythrocyte/bert-vits2_base_model/resolve/main/DUR_0.pth
-+ !wget -P logs/{datasetname}/ https://huggingface.co/Erythrocyte/bert-vits2_base_model/resolve/main/D_0.pth
-+ !wget -P logs/{datasetname}/ https://huggingface.co/Erythrocyte/bert-vits2_base_model/resolve/main/G_0.pth
+```
+!wget -P logs/{datasetname}/ https://huggingface.co/Erythrocyte/bert-vits2_base_model/resolve/main/DUR_0.pth
+!wget -P logs/{datasetname}/ https://huggingface.co/Erythrocyte/bert-vits2_base_model/resolve/main/D_0.pth
+!wget -P logs/{datasetname}/ https://huggingface.co/Erythrocyte/bert-vits2_base_model/resolve/main/G_0.pth
+```
 # 5.重采样
-+ !python resample.py
+```
+!python resample.py
+```
 # 6.执行preprocess_text.py
-+ !python preprocess_text.py
+```
+!python preprocess_text.py
+```
 # 7.执行!python bert_gen.py
-+ !python bert_gen.py
+```
+!python bert_gen.py
+```
 # 8.开始训练
-+ !python train_ms.py -m {datasetname} -c configs/config.json
+```
+!python train_ms.py -m {datasetname} -c configs/config.json
+```
 # 9.在线推理
-+ !python webui.py
-
+```
+!python webui.py
+```
 
 
 

@@ -13,17 +13,19 @@ VITS2 Backbone with bert
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/146KM8ks4tZQyEPVHIPPQI6PYId_FW9Ue?)
 
 ## 需要事先的准备工作：
-+ 1.若干时长的高质量语音文本  
-+ 2.音频切割工具slicer-gui 
-+ 3.数据处理和标注工具，来自b站up主领航员未鸟【Bert-VITS2/VITS】更快更准确！自动标注一键包来啦】 https://www.bilibili.com/video/BV1dr4y1X7RL/?share_source=copy_web&vd_source=0850903c2c3f5ed7b220c9bda4e285f6
+1.若干时长的高质量语音文本<br>  
+2.音频切割工具slicer-gui <br>
+3.数据处理和标注工具，来自b站up主领航员未鸟【Bert-VITS2/VITS】更快更准确！自动标注一键包来啦】 https://www.bilibili.com/video/BV1dr4y1X7RL/?share_source=copy_web&vd_source=0850903c2c3f5ed7b220c9bda4e285f6
 # 1.克隆仓库
-+!git clone https://github.com/MengXing15646/Bert-VITS2
+```
+!git clone https://github.com/MengXing15646/Bert-VITS2
+```
 # 准备工作，数据集的准备
-  1.原始数据音频必须是.wav格式，使用slicer-gui将文件切割为短于20s的音频
-  2.按照【Bert-VITS2/VITS】更快更准确！自动标注一键包来啦】 https://www.bilibili.com/video/BV1dr4y1X7RL/?share_source=copy_web&vd_source=0850903c2c3f5ed7b220c9bda4e285f6教程处理数据
-  3.将处理后的clean_barbara.list文件上传到filelists文件夹，并改名成【自己需要的名字】
-  4.将preprocess_text文件中的名字改为【自己需要的名字】
-  5.创建raw文件夹和它的子文件夹【自己需要的名字】，将处理后的音频上传到【自己需要的名字】文件夹
+1.原始数据音频必须是.wav格式，使用slicer-gui将文件切割为短于20s的音频<br>
+2.按照【Bert-VITS2/VITS】更快更准确！自动标注一键包来啦】 https://www.bilibili.com/video/BV1dr4y1X7RL/?share_source=copy_web&vd_source=0850903c2c3f5ed7b220c9bda4e285f6教程处理数据<br>
+3.将处理后的clean_barbara.list文件上传到filelists文件夹，并改名成【自己需要的名字】<br>
+4.将preprocess_text文件中的名字改为【自己需要的名字】<br>
+5.创建raw文件夹和它的子文件夹【自己需要的名字】，将处理后的音频上传到【自己需要的名字】文件夹<br>
 # 至此准备工作完成，开始训练
 
 
